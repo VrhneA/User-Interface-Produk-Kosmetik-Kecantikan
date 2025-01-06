@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<script>
+    document.getElementById('customerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Berhasil Disimpan');
+    });
+</script>
+<style>
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('bekgron.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: blur(8px);
+        z-index: -1;
+    }
+</style>
+</style>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #000000;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Master Form Pelanggan</h2>
+        <form id="customerForm">
+            <label for="customerName">Nama Pelanggan:</label>
+            <input type="text" id="customerName" name="customerName" required>
+
+            <label for="customerEmail">Email Pelanggan:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
+
+            <label for="customerPhone">No. Telepon:</label>
+            <input type="tel" id="customerPhone" name="customerPhone" required>
+
+            <input type="submit" value="Simpan">
+        </form>
+
+        <h2>Master Form Penjualan</h2>
+        <form id="salesForm">
+            <label for="saleDate">Tanggal Penjualan:</label>
+            <input type="date" id="saleDate" name="saleDate" required>
+
+            <label for="customerId">ID Pelanggan:</label>
+            <input type="text" id="customerId" name="customerId" required>
+
+            <label for="productId">ID Produk:</label>
+            <input type="text" id="productId" name="productId" required>
+
+            <label for="saleAmount">Jumlah Penjualan:</label>
+            <input type="number" id="saleAmount" name="saleAmount" required>
+
+            <input type="submit" value="Simpan">
+        </form>
+
+        <h2>Master Form Produk</h2>
+        <form id="productForm">
+            <label for="productName">Nama Produk:</label>
+            <input type="text" id="productName" name="productName" required>
+
+            <label for="productCategory">Kategori Produk:</label>
+            <input type="text" id="productCategory" name="productCategory" required>
+
+            <label for="productPrice">Harga Produk:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+
+            <input type="submit" value="Simpan">
+        </form>
+    </div>
+</body>
+</html>
+<style>
+.container h2 {
+    background-color: pink;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+</style>
